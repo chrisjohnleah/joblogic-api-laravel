@@ -1,0 +1,38 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "chrisjohnleah/joblogic-api-laravel",
+    "description": "Laravel bridge for the Joblogic API SDK.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.3",
+        "chrisjohnleah/joblogic-api": "^1.0",
+        "illuminate/cache": "^11.0|^12.0|^13.0",
+        "illuminate/support": "^11.0|^12.0|^13.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ChrisJohnLeah\\JoblogicLaravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ChrisJohnLeah\\JoblogicLaravel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ChrisJohnLeah\\JoblogicLaravel\\JoblogicServiceProvider"
+            ],
+            "aliases": {
+                "Joblogic": "ChrisJohnLeah\\JoblogicLaravel\\Facades\\Joblogic"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
