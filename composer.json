@@ -23,6 +23,12 @@
             "ChrisJohnLeah\\JoblogicLaravel\\Tests\\": "tests/"
         }
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/chrisjohnleah/joblogic-api"
+        }
+    ],
     "extra": {
         "laravel": {
             "providers": [
