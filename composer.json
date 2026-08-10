@@ -4,6 +4,12 @@
     "description": "Laravel bridge for the Joblogic API SDK.",
     "type": "library",
     "license": "MIT",
+    "homepage": "https://github.com/chrisjohnleah/joblogic-api-laravel",
+    "keywords": ["joblogic", "api", "sdk", "laravel", "saloon", "oauth2"],
+    "support": {
+        "issues": "https://github.com/chrisjohnleah/joblogic-api-laravel/issues",
+        "source": "https://github.com/chrisjohnleah/joblogic-api-laravel"
+    },
     "require": {
         "php": "^8.3",
         "chrisjohnleah/joblogic-api": "^1.0",

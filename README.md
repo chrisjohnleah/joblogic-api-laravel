@@ -1,7 +1,11 @@
 # Joblogic API — Laravel
 
-Laravel bridge for [`chrisjohnleah/joblogic-api`](../joblogic-api), the
+Laravel bridge for [`chrisjohnleah/joblogic-api`](https://github.com/chrisjohnleah/joblogic-api), the
 framework-agnostic Saloon SDK for Joblogic.
+
+```shell
+composer require chrisjohnleah/joblogic-api-laravel
+```
 
 The bridge provides the `Joblogic` facade, automatic service-provider
 discovery, a cache-backed token store, and a manager that builds a tenant-
@@ -20,6 +24,16 @@ $client = Joblogic::client([
 $customers = $client->search('Customer/GetAll', [
     'IncludeInactive' => true,
 ]);
+
+// The returned client also exposes the documented upload/note primitives:
+// $uploadUri = $client->getUploadFileUri('doorops-form.pdf');
+// $client->uploadFile($uploadUri->json('Uri'), $pdfStream);
+// $client->createNote([
+//     'EntityId' => $jobId,
+//     'EntityType' => 3,
+//     'NoteText' => 'DoorOps reviewed form',
+//     'Attachments' => [['AttachmentLink' => $uploadUri->json('Uri'), 'Name' => 'doorops-form.pdf']],
+// ]);
 ```
 
 Publish the optional cache configuration with:
